@@ -30,7 +30,7 @@ $('#derecha').on("swiperight",function(){
 			break;
 			
 			case 2:
-			navigator.notification.beep(2000);
+			navigator.notification.vibrate(2000);
 			break;
 		}
 	},"Aplicacion ", "Beep,Vibrar,Cancelar");
