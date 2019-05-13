@@ -12,7 +12,10 @@ $('#vibrar').tap(function(){
 });//tap vibrar
 
 	},false); //deviceready
-		document.addEventListener("deviceready",function(){
+}); //ready
+
+	$(document).ready(function(e){
+	document.addEventListener("deviceready",function(){
 
 $('#izquierda').on("swipeleft",function(){
 	navigator .notification. alert("Deslizo a la izquierda", function(){"Aplicacion ","Aceptar"});
@@ -27,20 +30,21 @@ $('#derecha').on("swiperight",function(){
 			break;
 			
 			case 2:
-			navigator.notification.Vibrate(2000);
+			navigator.notification.beep(2000);
 			break;
 		}
 	},"Aplicacion ", "Beep,Vibrar,Cancelar");
 	
 });
 	},false);
-		document.addEventListener ("deviceready",function(){
+});
+	$(document).ready(function (e){
+	document.addEventListener ("deviceready",function(){
 		$('#disp table td').eq(3).text(device.model);
 		$('#disp table td').eq(5).text(device.cordova);
 		$('#disp table td').eq(7).text(device.platform);
 		$('#disp table td').eq(9).text(device.version);
 		$('#disp table td').eq(11).text(device.uuid);
 	},false);//ready device
-
-}); //ready
 	
+});//document
